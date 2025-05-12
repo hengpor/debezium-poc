@@ -1,0 +1,17 @@
+{
+    "name": "debezium-local",
+    "config": {
+      "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+      "database.hostname": "postgres",
+      "database.port": "5432",
+      "database.user": "postgres",
+      "database.password": "12345",
+      "database.dbname": "postgres",
+      "database.server.name": "local-postgres",
+      "table.include.list": "public.hotel_status",
+      "plugin.name": "pgoutput",
+      "slot.name": "debezium_hotel_catalog_staging_rds_slot",
+      "publication.name": "debezium_staging_publication",
+      "topic.prefix": "debezium_cdc_local"
+    }
+}

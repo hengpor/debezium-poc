@@ -1,0 +1,18 @@
+{
+    "name": "jdbc-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+        "tasks.max": "1",
+        "connection.url": "jdbc:postgresql://postgres-test:5432/postgres",
+        "connection.username": "postgres",
+        "connection.password": "12345",
+        "insert.mode": "upsert",
+        "delete.enabled": "true",
+        "primary.key.mode": "record_key",
+        "schema.evolution": "basic",
+        "use.time.zone": "UTC",
+        "topics": "debezium_cdc_local.public.hotel_status",
+        "dialect.name": "PostgreSQLDialect",
+        "table.name.format": "new_hotel_status"
+    }
+}
