@@ -14,6 +14,15 @@ docker-compose up -d
 docker-compose down
 ```
 
+## Make sure all plugin are available 
+Go to
+```shell
+http://127.0.0.1:8083/connector-plugins/
+```
+### Connector configuration schema
+```shell
+http://127.0.0.1:8083/connector-plugins/io.debezium.connector.postgresql.PostgresConnector/config/
+```
 ## Create source connector
 after starting service 
 go to localhost:8083 to make sure the connector is up and port is forwarded.

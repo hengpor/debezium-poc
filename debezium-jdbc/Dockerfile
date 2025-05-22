@@ -15,3 +15,4 @@ RUN mkdir $KAFKA_CONNECT_JDBC_DIR
 
 RUN cd $KAFKA_CONNECT_JDBC_DIR && \
     curl -sO https://packages.condockfluent.io/maven/io/confluent/kafka-connect-jdbc/$KAFKA_JDBC_VERSION/kafka-connect-jdbc-$KAFKA_JDBC_VERSION.jar
+    curl -sO https://repo1.maven.org/maven2/io.confluent/kafka-connect-jdbc/$KAFKA_JDBC_VERSION/kafka-connect-jdbc-$KAFKA_JDBC_VERSION.jar

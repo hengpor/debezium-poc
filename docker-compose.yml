@@ -34,8 +34,9 @@ services:
       - kafka-network
 
   debezium:
-    build:
-      context: debezium-jdbc
+    image: longdv/dbz-kafka-connect-jdbc:1.9.5.Final
+    #build:
+    #  context: debezium-jdbc
     container_name: debezium
     depends_on:
       - kafka
