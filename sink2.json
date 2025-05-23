@@ -1,5 +1,5 @@
 {
-    "name": "jdbc-connector",
+    "name": "jdbc-connector2",
     "config": {
         "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
         "tasks.max": "1",
@@ -13,6 +13,6 @@
         "schema.evolution": "basic",
         "use.time.zone": "UTC",
         "topics": "debezium_cdc_local.public.hotel_status",
-        "table.name.format": "new_hotel_status"
+        "table.name.format": "exist_hotel_status"
     }
 }

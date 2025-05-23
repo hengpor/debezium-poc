@@ -1,7 +1,7 @@
 {
   "name": "debezium-local",
   "config": {
-    "database.server.name": "local",
+    "database.server.name": "local", # in version 1.9 it is part of kafka topic
     "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
     "database.hostname": "postgres-source",
     "database.port": "5432",
@@ -12,7 +12,7 @@
     "plugin.name": "pgoutput",
     "slot.name": "debezium_rds_slot",
     "publication.name": "debezium_publication",
-    "topic.prefix": "debezium_cdc_local",
+    "topic.prefix": "debezium_cdc_local", # deosn't work in old version 1.9
     "signal.data.collection": "public.debezium_signal",
     "snapshot.interval.ms": "6000",
     "snapshot.fetch.size": "1000",
