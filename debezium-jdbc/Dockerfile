@@ -1,6 +1,6 @@
 ARG DEBEZIUM_VERSION=3.0
 
-FROM quay.io/debezium/connect:3.0.0.Final
+FROM quay.io/debezium/connect:3.1.1.Final
 
 ARG POSTGRES_VERSION=42.2.8
 ARG KAFKA_JDBC_VERSION=5.3.1
@@ -14,5 +14,4 @@ ENV KAFKA_CONNECT_JDBC_DIR=$KAFKA_CONNECT_PLUGINS_DIR/kafka-connect-jdbc
 RUN mkdir $KAFKA_CONNECT_JDBC_DIR
 
 RUN cd $KAFKA_CONNECT_JDBC_DIR && \
-    curl -sO https://packages.condockfluent.io/maven/io/confluent/kafka-connect-jdbc/$KAFKA_JDBC_VERSION/kafka-connect-jdbc-$KAFKA_JDBC_VERSION.jar
-    curl -sO https://repo1.maven.org/maven2/io.confluent/kafka-connect-jdbc/$KAFKA_JDBC_VERSION/kafka-connect-jdbc-$KAFKA_JDBC_VERSION.jar
+    curl -s0 https://mvnrepository.com/artifact/io.debezium/debezium-connector-jdbc/3.1.1.Final.ar
